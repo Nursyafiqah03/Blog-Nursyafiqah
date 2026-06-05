@@ -180,12 +180,12 @@ main {
 }
 
 /* ------------------------------------------
-   NEW STYLES: ABOUT ME TWO-COLUMN LAYOUT WITH BACKGROUND
+   ABOUT ME TWO-COLUMN LAYOUT WITH BACKGROUND
    ------------------------------------------ */
 .about-bg-section {
-    /* MENETAPKAN: Gambar Syafiqah1.jpg sebagai latar belakang di mod gelap */
-    background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), 
-                url('Imej/Syafiqah1.jpg') no-repeat center center/cover;
+    /* KEMAS KINI: Menyelaraskan nama fail latar belakang kepada Syafiqah.jpg yang sedia ada */
+    background: linear-gradient(rgba(18, 18, 18, 0.88), rgba(18, 18, 18, 0.88)), 
+                url('Imej/Syafiqah.jpg') no-repeat center center/cover;
     background-attachment: fixed; /* Menghasilkan kesan parallax yang menarik sewaktu skrol */
     transition: background 0.3s ease;
 }
@@ -281,11 +281,57 @@ main {
     transition: color 0.3s ease;
 }
 
-.content-card ul {
-    padding-left: 20px;
-    line-height: 1.8;
-    color: #cccccc;
-    transition: color 0.3s ease;
+/* ------------------------------------------
+   NEW STYLES: REKABENTUK GRID UNTUK ACADEMIC SKILLS
+   ------------------------------------------ */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-color: #1abc9c;
+}
+
+.skill-item h4 {
+    color: #1abc9c;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.skill-item ul {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+}
+
+.skill-item ul li {
+    font-size: 0.88rem;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 12px;
+    color: #b3b3b3;
+}
+
+.skill-item ul li::before {
+    content: "•";
+    color: #1abc9c;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
 /* Blog Layout Section */
@@ -393,9 +439,9 @@ body.light-theme main {
 }
 
 body.light-theme .about-bg-section {
-    /* MENETAPKAN: Mengubah pencahayaan latar belakang imej Syafiqah1 ketika mod cerah diaktifkan */
-    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
-                url('Imej/Syafiqah1.jpg') no-repeat center center/cover;
+    /* KEMAS KINI MOD CERAH: Menggunakan Syafiqah.jpg yang dilaraskan kecerahannya */
+    background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), 
+                url('Imej/Syafiqah.jpg') no-repeat center center/cover;
 }
 
 body.light-theme header.sidebar {
@@ -497,10 +543,27 @@ body.light-theme header.sidebar footer {
     color: #888888;
 }
 
+/* Light Theme untuk Grid Layout */
+body.light-theme .skill-item {
+    background: rgba(0, 0, 0, 0.01);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .skill-item h4 {
+    color: #16a085;
+}
+
+body.light-theme .skill-item ul li {
+    color: #444444;
+}
+
+body.light-theme .skill-item ul li::before {
+    color: #16a085;
+}
+
 /* ==========================================
    6. RESPONSIVE DESIGN (SMARTPHONES)
    ========================================== */
-/* Added max-width 900px breakpoint to handle layout shifting nicely */
 @media (max-width: 900px) {
     .about-wrapper {
         flex-direction: column;

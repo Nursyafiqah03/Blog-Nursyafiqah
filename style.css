@@ -179,6 +179,76 @@ main {
     border-bottom: 1px solid #fff;
 }
 
+/* ------------------------------------------
+   NEW STYLES: ABOUT ME TWO-COLUMN LAYOUT WITH BACKGROUND
+   ------------------------------------------ */
+.about-bg-section {
+    /* MENETAPKAN: Gambar Syafiqah1.jpg sebagai latar belakang di mod gelap */
+    background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), 
+                url('Imej/Syafiqah1.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Menghasilkan kesan parallax yang menarik sewaktu skrol */
+    transition: background 0.3s ease;
+}
+
+.about-wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Left Column: Image Card Container */
+.about-image-card {
+    flex: 1;
+    max-width: 380px;
+    background: rgba(26, 26, 26, 0.9); /* Diubah sedikit lutsinar untuk mempamerkan imej latar belakang */
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-image-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-main-img {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #1e3d2f; /* Dark green border to match theme */
+    transition: border-color 0.3s ease;
+}
+
+.about-badge {
+    margin-top: 15px;
+    background-color: #1e3d2f;
+    color: #ffffff;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Scale styling balance for About Text Card */
+#about .content-card {
+    flex: 1.5;
+    margin: 0;
+    background: rgba(26, 26, 26, 0.9); /* Kad biografi diletakkan efek lutsinar premium */
+}
+
 /* Dark Content Card for About & Contact (Dark Card) */
 .content-card {
     background: #1a1a1a; /* Faded grey/black card color */
@@ -322,6 +392,12 @@ body.light-theme main {
     background-color: #ffffff;
 }
 
+body.light-theme .about-bg-section {
+    /* MENETAPKAN: Mengubah pencahayaan latar belakang imej Syafiqah1 ketika mod cerah diaktifkan */
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                url('Imej/Syafiqah1.jpg') no-repeat center center/cover;
+}
+
 body.light-theme header.sidebar {
     background-color: #f5f5f5; /* Soft light grey sidebar */
     border-right: 2px solid #e0e0e0;
@@ -371,9 +447,24 @@ body.light-theme .page-section {
 
 body.light-theme .content-card,
 body.light-theme .post {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.95); /* Sedikit lutsinar putih pada mod cerah */
     box-shadow: 0 4px 20px rgba(0,0,0,0.06); /* Soft light shadow */
     border: 1px solid #e0e0e0;
+}
+
+/* Light Theme overrides for the new About Me components */
+body.light-theme .about-image-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+body.light-theme .about-main-img {
+    border: 2px solid #1abc9c;
+}
+
+body.light-theme .about-badge {
+    background-color: #2c3e50;
 }
 
 body.light-theme .content-card h1,
@@ -409,6 +500,22 @@ body.light-theme header.sidebar footer {
 /* ==========================================
    6. RESPONSIVE DESIGN (SMARTPHONES)
    ========================================== */
+/* Added max-width 900px breakpoint to handle layout shifting nicely */
+@media (max-width: 900px) {
+    .about-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .about-image-card {
+        max-width: 100%;
+        width: 100%;
+    }
+    .about-main-img {
+        max-height: 340px;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;

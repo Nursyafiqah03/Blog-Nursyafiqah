@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,7 @@
 
         <nav>
             <ul>
-                <li><a href="#home"> Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about"> About Me</a></li>
                 <li><a href="#blog"> Blog</a></li>
                 <li><a href="#contact"> Contact</a></li>
@@ -46,40 +46,40 @@
 
         <section id="about" class="page-section">
             <div class="content-card">
-                <h1>Mengenai Diri Saya</h1>
-                <p>Hai! Nama saya <strong>Nursyafiqah Binti Abu Hassan</strong>. Saya merupakan pelajar tahun akhir dalam bidang <strong>Informatics Media</strong> di <strong>Universiti Sultan Zainal Abidin (UniSZA)</strong>.</p>
+                <h1>About Me</h1>
+                <p>Hi! My name is <strong>Nursyafiqah Binti Abu Hassan</strong>. I am a final-year student majoring in <strong>Informatics Media</strong> at <strong>Universiti Sultan Zainal Abidin (UniSZA)</strong>.</p>
                 
-                <h3>Projek GitHub Portfolio</h3>
-                <p>Laman web blog peribadi ini dibina khas bagi memenuhi syarat penilaian individu untuk kursus <strong>CSD 34203 Special Topics in Software Development</strong>. Melalui projek ini, saya mempraktikkan kemahiran reka bentuk web front-end serta pengurusan kawalan versi menggunakan Git & GitHub.</p>
+                <h3>GitHub Portfolio Project</h3>
+                <p>This personal blog website is specially built to fulfill the individual assessment requirements for the course <strong>CSD 34203 Special Topics in Software Development</strong>. Through this project, I practice front-end web design skills and version control management using Git & GitHub.</p>
                 
-                <h3>Kemahiran Akademik</h3>
+                <h3>Academic Skills</h3>
                 <ul>
-                    <li>Pembangunan Web Asas (HTML5 & CSS3)</li>
-                    <li>Media Informatika & Reka Bentuk Grafik</li>
-                    <li>Pengurusan Repositori Git & GitHub</li>
+                    <li>Core Web Development (HTML5 & CSS3)</li>
+                    <li>Informatics Media & Graphic Design</li>
+                    <li>Git & GitHub Repository Management</li>
                 </ul>
             </div>
         </section>
 
         <section id="blog" class="page-section">
             <div class="blog-container">
-                <h1 class="section-title">Blog & Perkongsian</h1>
+                <h1 class="section-title">Blog & Insights</h1>
                 
                 <article class="post">
-                    <h2>Post 1: Pengalaman Pertama Belajar Git</h2>
-                    <p class="date">Diterbitkan pada: Jun 5, 2026</p>
-                    <p>Hari ini saya belajar cara menggunakan Git untuk hantar kod ke GitHub. Rupanya sangat penting untuk pembangun perisian merekodkan setiap perubahan kod menggunakan 'commit'.</p>
+                    <h2>Post 1: First Experience Learning Git</h2>
+                    <p class="date">Published on: June 5, 2026</p>
+                    <p>Today I learned how to use Git to push code to GitHub. It turns out to be very important for software developers to record every code change using 'commits'.</p>
                 </article>
 
                 <article class="post">
-                    <h2>Post 2: Mengapa Memilih Tema Blog Peribadi?</h2>
-                    <p class="date">Diterbitkan pada: Jun 4, 2026</p>
-                    <p>Saya memilih tema ini kerana ia membolehkan saya mempamerkan portfolio kerja, biodata, dan kemahiran saya kepada bakal majikan pada masa hadapan secara kemas.</p>
+                    <h2>Post 2: Why Choose a Personal Blog Theme?</h2>
+                    <p class="date">Published on: June 4, 2026</p>
+                    <p>I chose this theme because it allows me to showcase my portfolio, bio, and skills to future employers in a neat and organized layout.</p>
                 </article>
 
                 <article class="post">
-                    <h2>Post 3: Kepentingan "Entrepreneurial Mindset" dalam Coding</h2>
-                    <p class="date">Diterbitkan pada: Jun 3, 2026</p>
+                    <h2>Post 3: The Importance of an "Entrepreneurial Mindset" in Coding</h2>
+                    <p class="date">Published on: June 3, 2026</p>
                     <p>As a software developer, we don't just write code; we solve real-world problems and create long-term value for our users.</p>
                 </article>
             </div>
@@ -87,13 +87,13 @@
 
         <section id="contact" class="page-section" style="display: flex; align-items: center;">
             <div class="content-card" style="text-align: center; width: 100%; max-width: 600px;">
-                <h1>Hubungi Saya</h1>
-                <p style="color: #666; margin-bottom: 30px;">Sekiranya anda mempunyai sebarang pertanyaan or ingin berbincang mengenai peluang kolaborasi perisian, sila hubungi saya:</p>
+                <h1>Contact Me</h1>
+                <p style="color: #666; margin-bottom: 30px;">If you have any questions or would like to discuss software collaboration opportunities, please feel free to contact me:</p>
                 
                 <div class="contact-box">
-                    <p>📧 <strong>Emel:</strong> student_unisza@putra.unisza.edu.my</p>
+                    <p>📧 <strong>Email:</strong> student_unisza@putra.unisza.edu.my</p>
                     <p>🌐 <strong>GitHub:</strong> github.com/Nursyafiqah</p>
-                    <p>📍 <strong>Lokasi:</strong> Fakulti Informatika dan Komputer (FIK), UniSZA</p>
+                    <p>📍 <strong>Location:</strong> Faculty of Informatics and Computing (FIK), UniSZA</p>
                 </div>
             </div>
         </section>
@@ -105,10 +105,10 @@
         const body = document.body;
 
         themeToggle.addEventListener('click', () => {
-            // Menambah atau membuang class 'light-theme' pada tag body
+            // Toggle the 'light-theme' class on the body tag
             body.classList.toggle('light-theme');
             
-            // Menukar teks butang mengikut tema aktif
+            // Switch the button text based on the active theme
             if (body.classList.contains('light-theme')) {
                 themeToggle.innerText = '🌙 Dark Mode';
             } else {

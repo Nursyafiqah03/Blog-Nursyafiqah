@@ -1,5 +1,5 @@
 /* ==========================================
-   1. RESET & GAYA UMUM (DARK MODE)
+   1. RESET & GENERAL STYLES (DARK MODE)
    ========================================== */
 * {
     box-sizing: border-box;
@@ -8,25 +8,25 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Skrol lembut antara seksyen */
+    scroll-behavior: smooth; /* Smooth scrolling between sections */
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212; /* Latar belakang utama hitam pekat */
-    color: #e0e0e0; /* Tulisan kelabu cerah supaya selesa dibaca */
+    background-color: #121212; /* Main background deep black */
+    color: #e0e0e0; /* Light grey text for comfortable reading */
     display: flex;
     min-height: 100vh;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ==========================================
-   2. SIDEBAR NAVIGATION (KIRI)
+   2. SIDEBAR NAVIGATION (LEFT)
    ========================================== */
 header.sidebar {
     width: 300px;
-    background-color: #0a0a0a; /* Sidebar hitam lebih gelap daripada body */
-    border-right: 2px solid #1c1c1c; /* Garisan pemisah kelabu gelap yang minimalis */
+    background-color: #0a0a0a; /* Sidebar darker black than the body */
+    border-right: 2px solid #1c1c1c; /* Minimalist dark grey divider line */
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
@@ -51,7 +51,7 @@ header.sidebar {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #1e3d2f; /* Bingkai hijau gelap yang premium */
+    border: 3px solid #1e3d2f; /* Premium dark green border */
     margin-bottom: 15px;
     transition: border-color 0.3s ease;
 }
@@ -64,7 +64,7 @@ header.sidebar {
     transition: color 0.3s ease;
 }
 
-/* Penambahbaikan ikon sosial media */
+/* Social media icon enhancements */
 .social-icons {
     margin: 15px 0;
     display: flex;
@@ -80,7 +80,7 @@ header.sidebar {
 }
 
 .social-icons a:hover {
-    color: #1abc9c; /* Tukar warna ikon bila di-hover */
+    color: #1abc9c; /* Change icon color on hover */
     transform: translateY(-2px);
 }
 
@@ -110,7 +110,7 @@ header.sidebar nav ul li a {
     transition: all 0.3s ease;
 }
 
-/* Efek Hover Menu Aktif */
+/* Active Menu Hover Effects */
 header.sidebar nav ul li a:hover,
 header.sidebar nav ul li a.active {
     background-color: #1a1a1a; 
@@ -127,32 +127,33 @@ header.sidebar footer {
 }
 
 /* ==========================================
-   3. KANDUNGAN UTAMA (KANAN)
+   3. MAIN CONTENT (RIGHT)
    ========================================== */
 main {
     margin-left: 300px;
     width: calc(100% - 300px);
-    background-color: #121212; /* Memastikan latar belakang kekal gelap */
+    background-color: #121212; /* Ensures background stays dark */
     transition: background-color 0.3s ease;
 }
 
-/* Setiap seksyen mengambil saiz penuh skrin browser */
+/* Each section takes up the full browser screen size */
 .page-section {
     min-height: 100vh;
     padding: 80px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #1a1a1a; /* Garisan pemisah antara seksyen */
+    border-bottom: 1px solid #1a1a1a; /* Divider line between sections */
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Seksyen Utama (Hero) */
+/* Main Section (Hero) */
 .hero-full {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
-                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    /* UPDATE: Local background image path using Imej folder */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
+                url('Imej/Latar.jpeg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -178,15 +179,15 @@ main {
     border-bottom: 1px solid #fff;
 }
 
-/* Kad Kandungan Gelap untuk About & Contact (Dark Card) */
+/* Dark Content Card for About & Contact (Dark Card) */
 .content-card {
-    background: #1a1a1a; /* Kad warna kelabu gelap/hitam pudar */
+    background: #1a1a1a; /* Faded grey/black card color */
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* Bayang lembut yang dalam */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* Deep soft shadow */
     max-width: 800px;
     width: 100%;
-    border: 1px solid #262626; /* Garisan halus keliling kad */
+    border: 1px solid #262626; /* Thin border around the card */
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -197,7 +198,7 @@ main {
 }
 
 .content-card h3 {
-    color: #1abc9c; /* Warna hijau teal lembut untuk tajuk kecil supaya menonjol */
+    color: #1abc9c; /* Soft teal green color for sub-headings to stand out */
     margin-top: 25px;
     margin-bottom: 10px;
     transition: color 0.3s ease;
@@ -217,7 +218,7 @@ main {
     transition: color 0.3s ease;
 }
 
-/* Bahagian Susunan Blog */
+/* Blog Layout Section */
 .blog-container {
     max-width: 800px;
     width: 100%;
@@ -233,7 +234,7 @@ main {
 }
 
 .post {
-    background: #1a1a1a; /* Kad blog gelap */
+    background: #1a1a1a; /* Dark blog card */
     padding: 25px;
     margin-bottom: 25px;
     border-radius: 12px;
@@ -243,7 +244,7 @@ main {
 }
 
 .post:hover {
-    transform: translateY(-3px); /* Memberikan efek interaktif premium semasa hover */
+    transform: translateY(-3px); /* Provides a premium interactive effect on hover */
 }
 
 .post h2 {
@@ -254,7 +255,7 @@ main {
 }
 
 .date {
-    color: #888888; /* Tarikh warna kelabu malap */
+    color: #888888; /* Dim grey date color */
     font-size: 0.9rem;
     margin-bottom: 15px;
     transition: color 0.3s ease;
@@ -266,13 +267,13 @@ main {
     transition: color 0.3s ease;
 }
 
-/* Kotak Info Hubungi (Dark Mode) */
+/* Contact Info Box (Dark Mode) */
 .contact-box {
     text-align: left;
     background: #111111;
     padding: 20px;
     border-radius: 8px;
-    border-left: 4px solid #1abc9c; /* Garisan tepi warna hijau teal */
+    border-left: 4px solid #1abc9c; /* Teal green side border */
     margin-top: 20px;
     border-top: 1px solid #222;
     border-right: 1px solid #222;
@@ -287,7 +288,7 @@ main {
 }
 
 /* ==========================================
-   4. GAYA BUTANG TOGGLE TEMA
+   4. THEME TOGGLE BUTTON STYLE
    ========================================== */
 .theme-btn {
     background-color: #1e3d2f;
@@ -310,7 +311,7 @@ main {
 }
 
 /* ==========================================
-   5. TETAPAN PENUKARAN WARNA (LIGHT THEME)
+   5. THEME SWITCH SETTINGS (LIGHT THEME)
    ========================================== */
 body.light-theme {
     background-color: #ffffff;
@@ -322,7 +323,7 @@ body.light-theme main {
 }
 
 body.light-theme header.sidebar {
-    background-color: #f5f5f5; /* Sidebar kelabu cerah lembut */
+    background-color: #f5f5f5; /* Soft light grey sidebar */
     border-right: 2px solid #e0e0e0;
     color: #222222;
 }
@@ -337,25 +338,25 @@ body.light-theme .theme-btn:hover {
 }
 
 body.light-theme .profile-img {
-    border: 3px solid #1abc9c; /* Bingkai bertukar warna hijau cerah */
+    border: 3px solid #1abc9c; /* Border color switches to bright green */
 }
 
 body.light-theme .profile-box h2 {
     color: #222222;
 }
 
-/* Pembetulan Pepijat: Memastikan teks navigasi kekal gelap dan boleh dibaca dalam Light Mode */
+/* Bug Fix: Ensures navigation text stays dark and readable in Light Mode */
 body.light-theme header.sidebar nav ul li a {
     color: #444444 !important;
 }
 
 body.light-theme header.sidebar nav ul li a:hover,
 body.light-theme header.sidebar nav ul li a.active {
-    background-color: #e5e5e5; /* Highlight menu bertema cerah */
+    background-color: #e5e5e5; /* Light theme menu highlight */
     color: #000000 !important;
 }
 
-/* Memastikan pautan ikon sosial media bertukar gelap pada Light Mode */
+/* Ensures social media icon links turn dark in Light Mode */
 body.light-theme .social-icons a {
     color: #555555;
 }
@@ -371,7 +372,7 @@ body.light-theme .page-section {
 body.light-theme .content-card,
 body.light-theme .post {
     background: #ffffff;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06); /* Bayang lembut yang cerah */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06); /* Soft light shadow */
     border: 1px solid #e0e0e0;
 }
 
@@ -384,7 +385,7 @@ body.light-theme .section-title {
 }
 
 body.light-theme .content-card h3 {
-    color: #16a085; /* Hijau teal lebih pekat sedikit untuk kontras mod cerah */
+    color: #16a085; /* Slightly darker teal green for better contrast in light mode */
 }
 
 body.light-theme .date {
@@ -406,7 +407,7 @@ body.light-theme header.sidebar footer {
 }
 
 /* ==========================================
-   6. RESPONSIVE DESIGN (TELEFON PINTAR)
+   6. RESPONSIVE DESIGN (SMARTPHONES)
    ========================================== */
 @media (max-width: 768px) {
     body {

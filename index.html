@@ -3,37 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Peribadi Saya | Home</title>
+    <title>Nursyafiqah Binti Abu Hassan | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. BAHAGIAN MENU UTAMA (NAVIGATION) -->
-    <header>
+    <!-- 1. BAHAGIAN MENU UTAMA (SIDEBAR NAVIGATION) -->
+    <!-- Menggunakan class "sidebar" untuk memanggil gaya dalam style.css baharu -->
+    <header class="sidebar">
+        <div class="profile-box">
+            <!-- Gambar Profil Bulat -->
+            <img src="https://via.placeholder.com/150" alt="Nursyafiqah Binti Abu Hassan" class="profile-img">
+            <h2>Nursyafiqah Binti Abu Hassan</h2>
+            
+            <!-- Ikon Sosial Media Ringkas -->
+            <div class="social-icons">
+                <a href="#">in</a>
+                <a href="#">📷</a>
+                <a href="#">f</a>
+                <a href="#">✉️</a>
+            </div>
+        </div>
+
+        <!-- Menu Navigasi ke Halaman Lain -->
         <nav>
-            <div class="logo">MyBlog</div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="active">🏠 Home</a></li>
+                <li><a href="about.html">👤 About Me</a></li>
+                <li><a href="blog.html">📄 Resume</a></li>
+                <li><a href="blog.html">📝 Articles</a></li>
+                <li><a href="contact.html">✉️ Contact</a></li>
             </ul>
         </nav>
+
+        <!-- 3. BAHAGIAN BAWAH (FOOTER DI DALAM SIDEBAR) -->
+        <footer>
+            <p>&copy; 2026 SyafiqahMedia.<br>Built for CSD34203.</p>
+        </footer>
     </header>
 
-    <!-- 2. BAHAGIAN UTAMA (HERO SECTION) -->
+    <!-- 2. BAHAGIAN UTAMA (HERO SECTION DI SEBELAH KANAN) -->
     <main>
-        <section class="hero">
-            <h1>Selamat Datang ke Blog Peribadi Saya!</h1>
-            <p>Hai, saya pelajar UniSZA. Ini adalah portfolio projek pembangunan perisian saya.</p>
-            <a href="about.html" class="btn">Kenali Saya Lebih Lanjut</a>
+        <!-- Menggunakan class "hero-full" untuk paparan latar belakang gambar penuh -->
+        <section class="hero-full">
+            <h1>Nursyafiqah Binti Abu Hassan</h1>
+            <p>I am a final-year student majoring in <span>Informatics Media at UniSZA.</span></p>
         </section>
     </main>
-
-    <!-- 3. BAHAGIAN BAWAH (FOOTER) -->
-    <footer>
-        <p>&copy; 2026 Blog Peribadi. Disediakan untuk CSD 34203.</p>
-    </footer>
 
 </body>
 </html>

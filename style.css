@@ -1,47 +1,195 @@
-/* Gaya Umum */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* ==========================================
+   1. GAYA UMUM (DIKEKALKAN)
+   ========================================== */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
 }
 
-/* Menu Navigasi */
-header {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex; /* Membolehkan struktur sidebar & kandungan utama duduk bersebelahan */
+    min-height: 100vh;
+}
+
+/* ==========================================
+   2. GAYA MENU NAVIGASI ASAL & PAGES LAIN
+   ========================================== */
+/* Ini kod asal anda, berguna jika anda buka halaman biasa tanpa sidebar */
+.normal-header {
     background-color: #2c3e50;
     color: white;
     padding: 15px 20px;
 }
 
-nav {
+.normal-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav ul {
+.normal-nav ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+.normal-nav ul li {
     margin-left: 20px;
 }
 
-nav ul li a {
+.normal-nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+.normal-nav ul li a:hover {
     color: #1abc9c;
 }
 
-/* Bahagian Kandungan (Hero) */
+/* ==========================================
+   3. GAYA SIDEBAR (KHAS UTK REKAAN BARU)
+   ========================================== */
+header.sidebar {
+    width: 300px;
+    background-color: #111111;
+    border-right: 3px solid #1e3d2f; /* Garisan hijau gelap seperti di Screenshot 2026-06-05 131149.jpg */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    color: white;
+}
+
+/* Kotak Profil & Gambar Bulat */
+.profile-box {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    margin-bottom: 15px;
+}
+
+.profile-box h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+}
+
+/* Ikon Sosial Media */
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 1.1rem;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* Menu Navigasi dalam Sidebar */
+header.sidebar nav {
+    width: 100%;
+    margin-top: 20px;
+    display: block; /* Mengatasi display:flex asal */
+}
+
+header.sidebar nav ul {
+    display: flex;
+    flex-direction: column; /* Tukar susunan ke bawah, bukan melintang */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header.sidebar nav ul li {
+    margin-left: 0; /* Buang margin kiri asal */
+    margin-bottom: 10px;
+}
+
+header.sidebar nav ul li a {
+    display: block;
+    color: #bbb;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+/* Efek Hover & Aktif Khas (Warna coklat kegelapan tulen) */
+header.sidebar nav ul li a:hover, 
+header.sidebar nav ul li a.active {
+    background-color: #1c1613; 
+    color: #fff;
+    font-weight: bold;
+}
+
+/* ==========================================
+   4. KANDUNGAN UTAMA & HERO SECTION
+   ========================================== */
+main {
+    margin-left: 300px; /* Menolak kandungan ke kanan supaya tidak bertindih dengan sidebar */
+    width: calc(100% - 300px);
+    min-height: 100vh;
+}
+
+/* Hero Section Impak Tinggi (Macam Screenshot 2026-06-05 131149.jpg) */
+.hero-full {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.hero-full h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.hero-full p {
+    font-size: 1.1rem;
+    color: #ccc;
+    font-weight: 300;
+}
+
+.hero-full p span {
+    border-bottom: 1px solid #fff; /* Garisan bawah teks */
+}
+
+/* Bahagian Hero Komponen Ringkas (Kod asal anda) */
 .hero {
     text-align: center;
     padding: 100px 20px;
@@ -54,6 +202,7 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
+/* Butang Asal */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -68,8 +217,24 @@ nav ul li a:hover {
     background-color: #16a085;
 }
 
-/* Bahagian Bawah (Footer) */
-footer {
+/* ==========================================
+   5. GAYA FOOTER
+   ========================================== */
+/* Footer untuk Sidebar */
+header.sidebar footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 1.5;
+    position: static; /* Ganti fixed asal */
+    padding: 0;
+    background-color: transparent;
+    width: 100%;
+}
+
+/* Footer Asal (Halaman Biasa) */
+.normal-footer {
     text-align: center;
     padding: 20px;
     background-color: #2c3e50;
@@ -77,4 +242,31 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* ==========================================
+   6. RESPONSIVE DESIGN (TELEFON PINTAR)
+   ========================================== */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    header.sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        padding: 20px;
+    }
+    header.sidebar nav ul {
+        flex-direction: row; /* Menu melintang semula di telefon */
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    main {
+        margin-left: 0;
+        width: 100%;
+    }
+    .hero-full h1 {
+        font-size: 2.2rem;
+    }
 }

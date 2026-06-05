@@ -1,5 +1,5 @@
 /* ==========================================
-   1. GAYA UMUM (DIKEKALKAN)
+   1. RESET & GAYA UMUM (DARK MODE - ASAL)
    ========================================== */
 * {
     box-sizing: border-box;
@@ -7,58 +7,26 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth; /* Skrol lembut antara seksyen */
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex; /* Membolehkan struktur sidebar & kandungan utama duduk bersebelahan */
+    background-color: #121212; /* Latar belakang utama hitam pekat */
+    color: #e0e0e0; /* Tulisan kelabu cerah supaya selesa dibaca */
+    display: flex;
     min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ==========================================
-   2. GAYA MENU NAVIGASI ASAL & PAGES LAIN
-   ========================================== */
-/* Ini kod asal anda, berguna jika anda buka halaman biasa tanpa sidebar */
-.normal-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 15px 20px;
-}
-
-.normal-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.normal-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.normal-nav ul li {
-    margin-left: 20px;
-}
-
-.normal-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.normal-nav ul li a:hover {
-    color: #1abc9c;
-}
-
-/* ==========================================
-   3. GAYA SIDEBAR (KHAS UTK REKAAN BARU)
+   2. SIDEBAR NAVIGATION (KIRI)
    ========================================== */
 header.sidebar {
     width: 300px;
-    background-color: #111111;
-    border-right: 3px solid #1e3d2f; /* Garisan hijau gelap seperti di Screenshot 2026-06-05 131149.jpg */
+    background-color: #0a0a0a; /* Sidebar hitam lebih gelap daripada body */
+    border-right: 2px solid #1c1c1c; /* Garisan pemisah kelabu gelap yang minimalis */
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
@@ -69,9 +37,9 @@ header.sidebar {
     left: 0;
     z-index: 100;
     color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Kotak Profil & Gambar Bulat */
 .profile-box {
     text-align: center;
     margin-bottom: 30px;
@@ -82,86 +50,102 @@ header.sidebar {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #fff;
+    border: 3px solid #1e3d2f; /* Bingkai hijau gelap yang premium */
     margin-bottom: 15px;
+    transition: border-color 0.3s ease;
 }
 
 .profile-box h2 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #fff;
+    color: #ffffff;
     line-height: 1.4;
+    transition: color 0.3s ease;
 }
 
-/* Ikon Sosial Media */
 .social-icons {
     margin: 15px 0;
 }
 
 .social-icons a {
-    color: #aaa;
+    color: #888;
     text-decoration: none;
     margin: 0 8px;
     font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #fff;
+    color: #1abc9c; /* Tukar warna ikon bila di-hover */
 }
 
-/* Menu Navigasi dalam Sidebar */
 header.sidebar nav {
     width: 100%;
     margin-top: 20px;
-    display: block; /* Mengatasi display:flex asal */
 }
 
 header.sidebar nav ul {
     display: flex;
-    flex-direction: column; /* Tukar susunan ke bawah, bukan melintang */
+    flex-direction: column;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 header.sidebar nav ul li {
-    margin-left: 0; /* Buang margin kiri asal */
     margin-bottom: 10px;
 }
 
 header.sidebar nav ul li a {
     display: block;
-    color: #bbb;
+    color: #aaaaaa;
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 8px;
     font-size: 1rem;
-    font-weight: normal;
     transition: all 0.3s ease;
 }
 
-/* Efek Hover & Aktif Khas (Warna coklat kegelapan tulen) */
-header.sidebar nav ul li a:hover, 
+/* Efek Hover Menu Aktif (Warna hitam arang) */
+header.sidebar nav ul li a:hover,
 header.sidebar nav ul li a.active {
-    background-color: #1c1613; 
-    color: #fff;
+    background-color: #1a1a1a; 
+    color: #ffffff;
     font-weight: bold;
 }
 
-/* ==========================================
-   4. KANDUNGAN UTAMA & HERO SECTION
-   ========================================== */
-main {
-    margin-left: 300px; /* Menolak kandungan ke kanan supaya tidak bertindih dengan sidebar */
-    width: calc(100% - 300px);
-    min-height: 100vh;
+header.sidebar footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #555;
+    line-height: 1.5;
 }
 
-/* Hero Section Impak Tinggi (Macam Screenshot 2026-06-05 131149.jpg) */
+/* ==========================================
+   3. KANDUNGAN UTAMA (KANAN)
+   ========================================== */
+main {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    background-color: #121212; /* Memastikan latar belakang kekal gelap */
+    transition: background-color 0.3s ease;
+}
+
+/* Setiap seksyen mengambil saiz penuh skrin browser */
+.page-section {
+    min-height: 100vh;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #1a1a1a; /* Garisan pemisah antara seksyen yang sangat halus */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Seksyen Utama (Hero) */
 .hero-full {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
                 url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
@@ -176,72 +160,228 @@ main {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 15px;
-    letter-spacing: -1px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 .hero-full p {
     font-size: 1.1rem;
     color: #ccc;
-    font-weight: 300;
 }
 
 .hero-full p span {
-    border-bottom: 1px solid #fff; /* Garisan bawah teks */
+    border-bottom: 1px solid #fff;
 }
 
-/* Bahagian Hero Komponen Ringkas (Kod asal anda) */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
-    color: white;
+/* Kad Kandungan Gelap untuk About & Contact (Dark Card) */
+.content-card {
+    background: #1a1a1a; /* Kad warna kelabu gelap/hitam pudar */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* Bayang lembut yang dalam */
+    max-width: 800px;
+    width: 100%;
+    border: 1px solid #262626; /* Garisan halus keliling kad */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
+.content-card h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.content-card h3 {
+    color: #1abc9c; /* Warna hijau teal lembut untuk tajuk kecil supaya menonjol */
+    margin-top: 25px;
     margin-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
-/* Butang Asal */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1abc9c;
+.content-card p {
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.content-card ul {
+    padding-left: 20px;
+    line-height: 1.8;
+    color: #cccccc;
+    transition: color 0.3s ease;
+}
+
+/* Bahagian Susunan Blog (Dark Mode) */
+.blog-container {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+
+.section-title {
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.post {
+    background: #1a1a1a; /* Kad blog gelap */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border: 1px solid #262626;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.date {
+    color: #888888; /* Tarikh warna kelabu malap */
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.post p {
+    color: #cccccc;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+/* Kotak Info Hubungi (Dark Mode) */
+.contact-box {
+    text-align: left;
+    background: #111111;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #1abc9c; /* Garisan tepi warna hijau teal */
+    margin-top: 20px;
+    border-top: 1px solid #222;
+    border-right: 1px solid #222;
+    border-bottom: 1px solid #222;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-box p {
+    margin-bottom: 12px !important;
+    color: #e0e0e0 !important;
+    transition: color 0.3s ease;
+}
+
+/* ==========================================
+   4. GAYA BUTANG TOGGLE TEMA
+   ========================================== */
+.theme-btn {
+    background-color: #1e3d2f;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.btn:hover {
+.theme-btn:hover {
     background-color: #16a085;
 }
 
 /* ==========================================
-   5. GAYA FOOTER
+   5. TETAPAN PENUKARAN WARNA (LIGHT THEME)
    ========================================== */
-/* Footer untuk Sidebar */
-header.sidebar footer {
-    margin-top: auto;
-    text-align: center;
-    font-size: 0.75rem;
-    color: #666;
-    line-height: 1.5;
-    position: static; /* Ganti fixed asal */
-    padding: 0;
-    background-color: transparent;
-    width: 100%;
+body.light-theme {
+    background-color: #ffffff;
+    color: #111111;
 }
 
-/* Footer Asal (Halaman Biasa) */
-.normal-footer {
-    text-align: center;
-    padding: 20px;
+body.light-theme main {
+    background-color: #ffffff;
+}
+
+body.light-theme header.sidebar {
+    background-color: #f5f5f5; /* Sidebar kelabu cerah lembut */
+    border-right: 2px solid #e0e0e0;
+    color: #222222;
+}
+
+body.light-theme .theme-btn {
     background-color: #2c3e50;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    color: #ffffff;
+}
+
+body.light-theme .theme-btn:hover {
+    background-color: #34495e;
+}
+
+body.light-theme .profile-img {
+    border: 3px solid #1abc9c; /* Bingkai bertukar warna hijau cerah */
+}
+
+body.light-theme .profile-box h2 {
+    color: #222222;
+}
+
+body.light-theme header.sidebar nav ul li a {
+    color: #555555;
+}
+
+body.light-theme header.sidebar nav ul li a:hover,
+body.light-theme header.sidebar nav ul li a.active {
+    background-color: #e5e5e5; /* Highlight menu bertema cerah */
+    color: #000000;
+}
+
+body.light-theme .page-section {
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #eeeeee;
+}
+
+body.light-theme .content-card,
+body.light-theme .post {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06); /* Bayang lembut yang cerah */
+    border: 1px solid #e0e0e0;
+}
+
+body.light-theme .content-card h1,
+body.light-theme .content-card p,
+body.light-theme .post h2,
+body.light-theme .post p,
+body.light-theme .section-title {
+    color: #222222;
+}
+
+body.light-theme .content-card h3 {
+    color: #16a085; /* Hijau teal lebih pekat sedikit untuk kontras mod cerah */
+}
+
+body.light-theme .date {
+    color: #7f8c8d;
+}
+
+body.light-theme .contact-box {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid #16a085;
+}
+
+body.light-theme .contact-box p {
+    color: #333333 !important;
+}
+
+body.light-theme header.sidebar footer {
+    color: #888888;
 }
 
 /* ==========================================
@@ -256,15 +396,23 @@ header.sidebar footer {
         position: relative;
         height: auto;
         padding: 20px;
+        border-right: none;
+        border-bottom: 2px solid #1c1c1c;
+    }
+    body.light-theme header.sidebar {
+        border-bottom: 2px solid #e0e0e0;
     }
     header.sidebar nav ul {
-        flex-direction: row; /* Menu melintang semula di telefon */
+        flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
     }
     main {
         margin-left: 0;
         width: 100%;
+    }
+    .page-section {
+        padding: 40px 20px;
     }
     .hero-full h1 {
         font-size: 2.2rem;

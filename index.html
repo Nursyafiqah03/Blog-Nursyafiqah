@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nursyafiqah Binti Abu Hassan | Home</title>
+    <title>Nursyafiqah Binti Abu Hassan | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. BAHAGIAN MENU UTAMA (SIDEBAR NAVIGATION) -->
-    <!-- Menggunakan class "sidebar" untuk memanggil gaya dalam style.css baharu -->
+    <!-- 1. SIDEBAR UTAMA (KIRI) -->
     <header class="sidebar">
+        <!-- BUTANG TOGGLE TEMA -->
+        <button id="theme-toggle" class="theme-btn">☀️ Light Mode</button>
+
         <div class="profile-box">
-            <!-- Gambar Profil Bulat -->
             <img src="https://via.placeholder.com/150" alt="Nursyafiqah Binti Abu Hassan" class="profile-img">
             <h2>Nursyafiqah Binti Abu Hassan</h2>
             
-            <!-- Ikon Sosial Media Ringkas -->
             <div class="social-icons">
                 <a href="#">in</a>
                 <a href="#">📷</a>
@@ -25,31 +25,109 @@
             </div>
         </div>
 
-        <!-- Menu Navigasi ke Halaman Lain -->
+        <!-- Menu Navigasi -->
         <nav>
             <ul>
-                <li><a href="index.html" class="active">🏠 Home</a></li>
-                <li><a href="about.html">👤 About Me</a></li>
-                <li><a href="blog.html">📄 Resume</a></li>
-                <li><a href="blog.html">📝 Articles</a></li>
-                <li><a href="contact.html">✉️ Contact</a></li>
+                <li><a href="#home">🏠 Home</a></li>
+                <li><a href="#about">👤 About Me</a></li>
+                <li><a href="#blog">📝 Blog</a></li>
+                <li><a href="#contact">✉️ Contact</a></li>
             </ul>
         </nav>
 
-        <!-- 3. BAHAGIAN BAWAH (FOOTER DI DALAM SIDEBAR) -->
         <footer>
             <p>&copy; 2026 SyafiqahMedia.<br>Built for CSD34203.</p>
         </footer>
     </header>
 
-    <!-- 2. BAHAGIAN UTAMA (HERO SECTION DI SEBELAH KANAN) -->
+    <!-- 2. KANDUNGAN UTAMA (KANAN) -->
     <main>
-        <!-- Menggunakan class "hero-full" untuk paparan latar belakang gambar penuh -->
-        <section class="hero-full">
+        
+        <!-- SECTION 1: HOME -->
+        <section id="home" class="hero-full">
             <h1>Nursyafiqah Binti Abu Hassan</h1>
             <p>I am a final-year student majoring in <span>Informatics Media at UniSZA.</span></p>
         </section>
+
+        <!-- SECTION 2: ABOUT ME -->
+        <section id="about" class="page-section">
+            <div class="content-card">
+                <h1>Mengenai Diri Saya</h1>
+                <p>Hai! Nama saya <strong>Nursyafiqah Binti Abu Hassan</strong>. Saya merupakan pelajar tahun akhir dalam bidang <strong>Informatics Media</strong> di <strong>Universiti Sultan Zainal Abidin (UniSZA)</strong>.</p>
+                
+                <h3>Projek GitHub Portfolio</h3>
+                <p>Laman web blog peribadi ini dibina khas bagi memenuhi syarat penilaian individu untuk kursus <strong>CSD 34203 Special Topics in Software Development</strong>. Melalui projek ini, saya mempraktikkan kemahiran reka bentuk web front-end serta pengurusan kawalan versi menggunakan Git & GitHub.</p>
+                
+                <h3>Kemahiran Akademik</h3>
+                <ul>
+                    <li>Pembangunan Web Asas (HTML5 & CSS3)</li>
+                    <li>Media Informatika & Reka Bentuk Grafik</li>
+                    <li>Pengurusan Repositori Git & GitHub[cite: 1]</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION 3: BLOG -->
+        <section id="blog" class="page-section">
+            <div class="blog-container">
+                <h1 class="section-title">Blog & Perkongsian</h1>
+                
+                <!-- Post 1 -->
+                <article class="post">
+                    <h2>Post 1: Pengalaman Pertama Belajar Git</h2>
+                    <p class="date">Diterbitkan pada: Jun 5, 2026</p>
+                    <p>Hari ini saya belajar cara menggunakan Git untuk hantar kod ke GitHub[cite: 1]. Rupanya sangat penting untuk pembangun perisian merekodkan setiap perubahan kod menggunakan 'commit'[cite: 1].</p>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="post">
+                    <h2>Post 2: Mengapa Memilih Tema Blog Peribadi?</h2>
+                    <p class="date">Diterbitkan pada: Jun 4, 2026</p>
+                    <p>Saya memilih tema ini kerana ia membolehkan saya mempamerkan portfolio kerja, biodata, dan kemahiran saya kepada bakal majikan pada masa hadapan secara kemas[cite: 1].</p>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="post">
+                    <h2>Post 3: Kepentingan "Entrepreneurial Mindset" dalam Coding</h2>
+                    <p class="date">Diterbitkan pada: Jun 3, 2026</p>
+                    <p>As a software developer, we don't just write code; we solve real-world problems and create long-term value for our users[cite: 1].</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CONTACT -->
+        <section id="contact" class="page-section" style="display: flex; align-items: center;">
+            <div class="content-card" style="text-align: center; width: 100%; max-width: 600px;">
+                <h1>Hubungi Saya</h1>
+                <p style="color: #666; margin-bottom: 30px;">Sekiranya anda mempunyai sebarang pertanyaan atau ingin berbincang mengenai peluang kolaborasi perisian, sila hubungi saya:</p>
+                
+                <div class="contact-box">
+                    <p>📧 <strong>Emel:</strong> student_unisza@putra.unisza.edu.my</p>
+                    <p>🌐 <strong>GitHub:</strong> github.com/Nursyafiqah</p>
+                    <p>📍 <strong>Lokasi:</strong> Fakulti Informatika dan Komputer (FIK), UniSZA[cite: 1]</p>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <!-- KOD JAVASCRIPT UNTUK INTERAKSI SWITCH MODE -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            // Menambah atau membuang class 'light-theme' pada tag body
+            body.classList.toggle('light-theme');
+            
+            // Menukar teks butang mengikut tema aktif
+            if (body.classList.contains('light-theme')) {
+                themeToggle.innerText = '🌙 Dark Mode';
+            } else {
+                themeToggle.innerText = '☀️ Light Mode';
+            }
+        });
+    </script>
 
 </body>
 </html>

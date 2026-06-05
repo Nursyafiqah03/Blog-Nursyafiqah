@@ -1,5 +1,5 @@
 /* ==========================================
-   1. RESET & GAYA UMUM (DARK MODE - ASAL)
+   1. RESET & GAYA UMUM (DARK MODE)
    ========================================== */
 * {
     box-sizing: border-box;
@@ -43,6 +43,7 @@ header.sidebar {
 .profile-box {
     text-align: center;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .profile-img {
@@ -63,20 +64,24 @@ header.sidebar {
     transition: color 0.3s ease;
 }
 
+/* Penambahbaikan ikon sosial media */
 .social-icons {
     margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 .social-icons a {
     color: #888;
     text-decoration: none;
-    margin: 0 8px;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .social-icons a:hover {
     color: #1abc9c; /* Tukar warna ikon bila di-hover */
+    transform: translateY(-2px);
 }
 
 header.sidebar nav {
@@ -101,10 +106,11 @@ header.sidebar nav ul li a {
     padding: 12px 20px;
     border-radius: 8px;
     font-size: 1rem;
+    font-weight: 500;
     transition: all 0.3s ease;
 }
 
-/* Efek Hover Menu Aktif (Warna hitam arang) */
+/* Efek Hover Menu Aktif */
 header.sidebar nav ul li a:hover,
 header.sidebar nav ul li a.active {
     background-color: #1a1a1a; 
@@ -133,11 +139,11 @@ main {
 /* Setiap seksyen mengambil saiz penuh skrin browser */
 .page-section {
     min-height: 100vh;
-    padding: 60px 40px;
+    padding: 80px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #1a1a1a; /* Garisan pemisah antara seksyen yang sangat halus */
+    border-bottom: 1px solid #1a1a1a; /* Garisan pemisah antara seksyen */
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -211,7 +217,7 @@ main {
     transition: color 0.3s ease;
 }
 
-/* Bahagian Susunan Blog (Dark Mode) */
+/* Bahagian Susunan Blog */
 .blog-container {
     max-width: 800px;
     width: 100%;
@@ -222,6 +228,7 @@ main {
     color: #ffffff;
     margin-bottom: 30px;
     text-align: center;
+    font-size: 2.2rem;
     transition: color 0.3s ease;
 }
 
@@ -232,11 +239,16 @@ main {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     border: 1px solid #262626;
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-3px); /* Memberikan efek interaktif premium semasa hover */
 }
 
 .post h2 {
     color: #ffffff;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     transition: color 0.3s ease;
 }
@@ -332,14 +344,23 @@ body.light-theme .profile-box h2 {
     color: #222222;
 }
 
+/* Pembetulan Pepijat: Memastikan teks navigasi kekal gelap dan boleh dibaca dalam Light Mode */
 body.light-theme header.sidebar nav ul li a {
-    color: #555555;
+    color: #444444 !important;
 }
 
 body.light-theme header.sidebar nav ul li a:hover,
 body.light-theme header.sidebar nav ul li a.active {
     background-color: #e5e5e5; /* Highlight menu bertema cerah */
-    color: #000000;
+    color: #000000 !important;
+}
+
+/* Memastikan pautan ikon sosial media bertukar gelap pada Light Mode */
+body.light-theme .social-icons a {
+    color: #555555;
+}
+body.light-theme .social-icons a:hover {
+    color: #16a085;
 }
 
 body.light-theme .page-section {
@@ -395,26 +416,47 @@ body.light-theme header.sidebar footer {
         width: 100%;
         position: relative;
         height: auto;
-        padding: 20px;
+        padding: 25px 20px;
         border-right: none;
         border-bottom: 2px solid #1c1c1c;
     }
     body.light-theme header.sidebar {
         border-bottom: 2px solid #e0e0e0;
     }
+    
+    .profile-box {
+        margin-bottom: 15px;
+    }
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+    
     header.sidebar nav ul {
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
+        gap: 5px;
     }
+    header.sidebar nav ul li {
+        margin-bottom: 0;
+    }
+    header.sidebar nav ul li a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
     main {
         margin-left: 0;
         width: 100%;
     }
     .page-section {
-        padding: 40px 20px;
+        padding: 50px 20px;
     }
     .hero-full h1 {
         font-size: 2.2rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
     }
 }

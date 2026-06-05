@@ -14,12 +14,8 @@
         <div class="profile-box">
             <img src="Imej/Syafiqah.jpg" alt="Nursyafiqah Binti Abu Hassan" class="profile-img">
             <h2>Nursyafiqah Binti Abu Hassan</h2>
-            
             <div class="social-icons">
-                <a href="#">in</a>
-                <a href="#">📷</a>
-                <a href="#">f</a>
-                <a href="#">✉️</a>
+                <a href="#">in</a> <a href="#">📷</a> <a href="#">f</a> <a href="#">✉️</a>
             </div>
         </div>
 
@@ -38,13 +34,11 @@
     </header>
 
     <main>
-        <!-- HOME SECTION -->
         <section id="home" class="hero-full">
             <h1>Nursyafiqah Binti Abu Hassan</h1>
             <p>I am a final-year student majoring in <span>Informatics Media at UniSZA.</span></p>
         </section>
 
-        <!-- ABOUT ME SECTION -->
         <section id="about" class="page-section about-bg-section">
             <div class="about-wrapper">
                 <div class="about-image-card">
@@ -55,9 +49,6 @@
                 <div class="content-card">
                     <h1>About Me</h1>
                     <p>Hi! My name is <strong>Nursyafiqah Binti Abu Hassan</strong>. I am a final-year student majoring in <strong>Informatics Media</strong> at <strong>Universiti Sultan Zainal Abidin (UniSZA)</strong>.</p>
-                    
-                    <h3>The Informatics Media</h3>
-                    <p>The Informatics Media field focuses on the integration of technology, creativity and digital media development to create interactive and user-friendly applications and systems.</p>
                     
                     <h3>Academic Skills</h3>
                     <div class="skills-grid">
@@ -73,7 +64,6 @@
                             <ul>
                                 <li>Informatics Media & Graphic Design</li>
                                 <li>Multimedia development</li>
-                                <li>Photography and visual composition</li>
                             </ul>
                         </div>
                     </div>
@@ -81,23 +71,18 @@
             </div>
         </section>
 
-        <!-- PROJECTS SECTION (Bahagian Baru) -->
         <section id="projects" class="page-section">
             <div class="blog-container">
                 <h2 class="section-title">My Projects & Journey</h2>
                 <div class="projects-grid">
-                    
-                    <!-- Kad Projek 1 -->
                     <div class="project-card">
                         <img src="Imej/projek1.jpg" alt="Project 1" class="project-img">
                         <div class="project-content">
                             <h3>Sistem Web UniSZA</h3>
-                            <p>Projek pembangunan sistem web menggunakan PHP dan MySQL untuk pengurusan data.</p>
+                            <p>Projek pembangunan sistem web menggunakan PHP dan MySQL.</p>
                             <span class="tech-tag">PHP</span> <span class="tech-tag">MySQL</span>
                         </div>
                     </div>
-
-                    <!-- Kad Projek 2 -->
                     <div class="project-card">
                         <img src="Imej/projek2.jpg" alt="Project 2" class="project-img">
                         <div class="project-content">
@@ -106,16 +91,14 @@
                             <span class="tech-tag">Figma</span> <span class="tech-tag">UI/UX</span>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
         <section id="contact" class="page-section">
             <div class="content-card" style="text-align: center; width: 100%; max-width: 600px;">
                 <h1>Contact Me</h1>
-                <p>If you have any questions or collaboration opportunities, feel free to contact me:</p>
+                <p>If you have any questions or collaboration opportunities, please feel free to contact me:</p>
                 <div class="contact-box">
                     <p>📧 <strong>Email:</strong> student_unisza@putra.unisza.edu.my</p>
                     <p>🌐 <strong>GitHub:</strong> github.com/Nursyafiqah</p>
@@ -127,7 +110,6 @@
     <script>
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
-
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('light-theme');
             themeToggle.innerText = body.classList.contains('light-theme') ? '🌙 Dark Mode' : '☀️ Light Mode';

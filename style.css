@@ -183,10 +183,8 @@ main {
    ABOUT ME TWO-COLUMN LAYOUT WITH BACKGROUND
    ------------------------------------------ */
 .about-bg-section {
-    /* KEMAS KINI: Menyelaraskan nama fail latar belakang kepada Syafiqah.jpg yang sedia ada */
-    background: linear-gradient(rgba(18, 18, 18, 0.88), rgba(18, 18, 18, 0.88)), 
-                url('Imej/Syafiqah.jpg') no-repeat center center/cover;
-    background-attachment: fixed; /* Menghasilkan kesan parallax yang menarik sewaktu skrol */
+    background-color: #121212; /* Tukar kepada warna hitam solid */
+    background-attachment: scroll;
     transition: background 0.3s ease;
 }
 
@@ -439,9 +437,8 @@ body.light-theme main {
 }
 
 body.light-theme .about-bg-section {
-    /* KEMAS KINI MOD CERAH: Menggunakan Syafiqah.jpg yang dilaraskan kecerahannya */
-    background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), 
-                url('Imej/Syafiqah.jpg') no-repeat center center/cover;
+   /* Menukar background kepada putih solid */
+    background-color: #ffffff;
 }
 
 body.light-theme header.sidebar {

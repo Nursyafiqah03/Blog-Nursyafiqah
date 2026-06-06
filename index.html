@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nursyafiqah Binti Abu Hassan | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,10 +17,10 @@
             <h2>Nursyafiqah Binti Abu Hassan</h2>
             
             <div class="social-icons">
-                <a href="#">in</a>
-                <a href="#">📷</a>
-                <a href="#">f</a>
-                <a href="#">✉️</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/yourprofile" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="mailto:nuesyafiqah8@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
 
@@ -38,7 +39,6 @@
     </header>
 
     <main>
-        
         <section id="home" class="hero-full">
             <h1>Nursyafiqah Binti Abu Hassan</h1>
             <p>I am a final-year student majoring in <span>Informatics Media at UniSZA.</span></p>
@@ -46,7 +46,6 @@
 
         <section id="about" class="page-section about-bg-section">
             <div class="about-wrapper">
-                
                 <div class="about-image-card">
                     <img src="Imej/Syafiqah1.jpeg" alt="Nursyafiqah Biography Image" class="about-main-img">
                     <div class="about-badge">Informatics Media Student</div>
@@ -68,7 +67,6 @@
                                 <li>Git & GitHub Repository Management</li>
                             </ul>
                         </div>
-
                         <div class="skill-item">
                             <h4>🎬 Multimedia & Graphic Design</h4>
                             <ul>
@@ -76,14 +74,12 @@
                                 <li>Multimedia development (video editing and graphic design)</li>
                             </ul>
                         </div>
-
                         <div class="skill-item">
                             <h4>🛠️ Technical Software Familiarity</h4>
                             <ul>
                                 <li>Familiar with software like Canva, CapCut, Unity, Maya, Blender, Adobe Animation (basic)</li>
                             </ul>
                         </div>
-
                         <div class="skill-item">
                             <h4>💡 Core & Design Competencies</h4>
                             <ul>
@@ -92,30 +88,24 @@
                             </ul>
                         </div>
                     </div>
-                    
                 </div>
-
             </div>
         </section>
 
         <section id="blog" class="page-section">
             <div class="blog-container">
                 <h1 class="section-title">Blog & Insights</h1>
-                
                 <article class="post">
                     <h2>Project 1: 3D Animation A Simple Cleaning Routine</h2>
-                    <p>This project focuses on creating a simple 3D animation that presents a daily cleaning routine. It involves the process of designing 3D objects, character movements and animation sequences to create an interactive and realistic visual experience.</p>
+                    <p>This project focuses on creating a simple 3D animation that presents a daily cleaning routine.</p>
                 </article>
-
                 <article class="post">
                     <h2>Project 2: RM Sehari 2026</h2>
-                    <p>RM Sehari 2026 is a project developed to promote awareness of budget management and encourage users to practice smart financial planning in daily life. The project aims to provide users with an easier way to monitor and manage their daily expenses through a simple and user-friendly interface..</p>
+                    <p>RM Sehari 2026 is a project developed to promote awareness of budget management and encourage users to practice smart financial planning.</p>
                 </article>
-
                 <article class="post">
                     <h2>Project 3: Essence of Elegant (Perfume Paradise & De’Vogue)</h2>
-
-                    <p>Essence of Elegant is a project designed to showcase perfume products through an attractive and modern platform. The project focuses on creating a visually appealing design and improving user experience while presenting product information in a more organized way.</p>
+                    <p>Essence of Elegant is a project designed to showcase perfume products through an attractive and modern platform.</p>
                 </article>
             </div>
         </section>
@@ -123,16 +113,14 @@
         <section id="contact" class="page-section" style="display: flex; align-items: center;">
             <div class="content-card" style="text-align: center; width: 100%; max-width: 600px;">
                 <h1>Contact Me</h1>
-                <p style="color: #666; margin-bottom: 30px;">If you have any questions or would like to discuss software collaboration opportunities, please feel free to contact me:</p>
-                
+                <p style="margin-bottom: 30px;">If you have any questions or would like to discuss software collaboration opportunities, please feel free to contact me:</p>
                 <div class="contact-box">
-                    <p>📧 <strong>Email:</strong> nuesyafiqah8@gmail.com</p>
-                    <p>🌐 <strong>GitHub:</strong> github.com/Nursyafiqah</p>
-                    <p>📍 <strong>Location:</strong> Faculty of Informatics and Computing (FIK), UniSZA</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> nuesyafiqah8@gmail.com</p>
+                    <p><i class="fab fa-github"></i> <strong>GitHub:</strong> github.com/Nursyafiqah</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Faculty of Informatics and Computing (FIK), UniSZA</p>
                 </div>
             </div>
         </section>
-
     </main>
 
     <script>
@@ -140,17 +128,9 @@
         const body = document.body;
 
         themeToggle.addEventListener('click', () => {
-            // Toggle the 'light-theme' class on the body tag
             body.classList.toggle('light-theme');
-            
-            // Switch the button text based on the active theme
-            if (body.classList.contains('light-theme')) {
-                themeToggle.innerText = '🌙 Dark Mode';
-            } else {
-                themeToggle.innerText = '☀️ Light Mode';
-            }
+            themeToggle.innerText = body.classList.contains('light-theme') ? '🌙 Dark Mode' : '☀️ Light Mode';
         });
     </script>
-
 </body>
 </html>

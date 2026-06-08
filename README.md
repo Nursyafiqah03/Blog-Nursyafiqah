@@ -1,38 +1,42 @@
-# Portfolio Nursyafiqah Binti Abu Hassan
+# Nursyafiqah Binti Abu Hassan Portfolio
 
-Ini adalah repositori untuk portfolio peribadi saya yang dibangunkan sebagai sebahagian daripada tugasan kursus **CSD34203**. Portfolio ini memaparkan profil diri, kemahiran teknikal, dan projek-projek yang telah saya laksanakan.
+This is a repository for my personal portfolio developed as part of the **CSD34203** course assignment. This portfolio showcases my profile, technical skills, and projects that I have completed.
 
 ## 📝 Description
-Portfolio ini merupakan platform digital yang direka untuk mempamerkan hasil kerja, pengalaman, dan kemahiran saya dalam bidang **Informatics Media**. Ia berfungsi sebagai medium interaksi antara saya dan bakal majikan untuk melihat pencapaian akademik dan projek praktikal saya.
+
+This portfolio is a digital platform designed to showcase my work, experience, and skills in the field of **Informatics Media**. It serves as an interaction medium for potential employers to view my academic achievements and practical projects.
 
 ## ✨ Features
-* **Profil Diri:** Paparan maklumat peribadi dan gambar profil.
-* **Navigasi Mudah:** Menu navigasi untuk akses pantas ke bahagian Home, About Me, Blog, dan Contact.
-* **Mod Tema:** Sokongan *Light Mode* dan *Dark Mode* untuk keselesaan pengguna.
-* **Blog & Insights:** Seksyen khusus untuk berkongsi pengalaman pembelajaran dan projek.
-* **Responsif:** Reka bentuk yang mesra peranti mudah alih (mobile-friendly).
+
+* **Personal Profile:** Displays personal information and profile picture.
+* **Easy Navigation:** Navigation menu for quick access to Home, About Me, Blog, and Contact sections.
+* **Theme Mode:** Supports *Light Mode* and *Dark Mode* for user convenience.
+* **Blog & Insights:** A dedicated section for sharing learning experiences and projects.
+* **Responsive Design:** Mobile-friendly layout suitable for different devices.
 
 ## 🛠️ Technologies Used
-* **HTML5:** Struktur kandungan utama.
-* **CSS3:** Gaya reka bentuk dan *layout* (menggunakan Flexbox).
-* **JavaScript:** Fungsi penukaran tema (Light/Dark Mode).
-* **Font Awesome:** Ikon-ikon profesional untuk media sosial dan hubungan.
-* **Git & GitHub:** Pengurusan repositori dan kawalan versi kod.
 
-## 🖼️ Screenshots
-*(Anda boleh masukkan tangkapan skrin laman web anda di sini)*
-- **Desktop View:** [Sila masukkan link gambar di sini]
-- **Mobile View:** [Sila masukkan link gambar di sini]
+* **HTML5:** Main content structure.
+* **CSS3:** Styling and layout design (using Flexbox).
+* **JavaScript:** Theme switching functionality (Light/Dark Mode).
+* **Font Awesome:** Professional icons for social media and contact information.
+* **Git & GitHub:** Repository management and version control.
+
 
 ## 🚀 How to Run the Project
-1. **Clone** repositori ini ke komputer anda:
-   `git clone https://github.com/Nursyafiqah/nama-repositori-anda.git`
-2. Buka folder projek dalam kod editor (contoh: VS Code).
-3. Buka fail `index.html` menggunakan pelayar web (Google Chrome, Edge, atau Firefox).
+https://drive.google.com/drive/folders/1jxoaAOQvpLYm5cOSZRLcdK5dSJGQIjlY?usp=drive_link
 
 ## 🌐 Demo Link
-Sila lawati portfolio saya yang telah dipaparkan secara langsung di:
-[https://nursyafiqah03.github.io/](https://nursyafiqah03.github.io/)
+
+Please visit my live portfolio at:
+
+[https://nursyafiqah03.github.io/](https://nursyafiqah03.github.io/Blog-Nursyafiqah/)
+
+## GitHub Repository:
+https://github.com/Nursyafiqah03/Blog-Nursyafiqah.git
+
+
 
 ---
-*Dibina oleh Nursyafiqah Binti Abu Hassan © 2026*
+
+*Built by Nursyafiqah Binti Abu Hassan © 2026*
